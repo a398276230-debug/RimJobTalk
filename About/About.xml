@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimJobTalk</name>
+  <author>ruaji</author>
+  <packageId>ruaji.rimjobtalk</packageId>
+  <description>哦？哦哦？哦齁齁齁齁齁</description>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>cj.rimtalk</packageId>
+      <displayName>RimTalk</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3259020985</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>rim.job.world</packageId>
+      <displayName>RimJobWorld</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>cj.rimtalk</li>
+    <li>rim.job.world</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,9 @@
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobtalk.csproj.AssemblyReference.cache
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobtalk.GeneratedMSBuildEditorConfig.editorconfig
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobtalk.AssemblyInfoInputs.cache
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobtalk.AssemblyInfo.cs
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobtalk.csproj.CoreCompileInputs.cache
+D:\steam\steamapps\common\Rjwtalk patch\1.6\Assemblies\RimJobTalk.dll
+D:\steam\steamapps\common\Rjwtalk patch\1.6\Assemblies\RimJobTalk.pdb
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobTalk.dll
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobTalk.pdb
