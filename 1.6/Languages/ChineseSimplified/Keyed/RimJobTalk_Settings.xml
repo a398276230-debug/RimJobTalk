@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- 标签页名称 -->
+    <RimJobTalk_Tab_Normal>普通</RimJobTalk_Tab_Normal>
+    <RimJobTalk_Tab_Rape>强奸</RimJobTalk_Tab_Rape>
+    <RimJobTalk_Tab_Whoring>卖淫</RimJobTalk_Tab_Whoring>
+    <RimJobTalk_Tab_Bestiality>兽交</RimJobTalk_Tab_Bestiality>
+    <RimJobTalk_Tab_Necrophilia>恋尸</RimJobTalk_Tab_Necrophilia>
+    <RimJobTalk_Tab_Solo>自慰</RimJobTalk_Tab_Solo>
+    <RimJobTalk_Tab_Context>情境</RimJobTalk_Tab_Context>
+    <RimJobTalk_Tab_Help>帮助</RimJobTalk_Tab_Help>
+    
+    <!-- 提示词编辑器标题 -->
+    <RimJobTalk_Prompt_Normal_Title>普通性行为提示词</RimJobTalk_Prompt_Normal_Title>
+    <RimJobTalk_Prompt_Normal_Desc>用于两个小人之间浪漫/自愿性行为的模板。</RimJobTalk_Prompt_Normal_Desc>
+    
+    <RimJobTalk_Prompt_Rape_Title>强奸提示词</RimJobTalk_Prompt_Rape_Title>
+    <RimJobTalk_Prompt_Rape_Desc>用于非自愿场景的模板。</RimJobTalk_Prompt_Rape_Desc>
+    
+    <RimJobTalk_Prompt_Whoring_Title>卖淫提示词</RimJobTalk_Prompt_Whoring_Title>
+    <RimJobTalk_Prompt_Whoring_Desc>用于有偿性行为场景的模板。</RimJobTalk_Prompt_Whoring_Desc>
+    
+    <RimJobTalk_Prompt_Bestiality_Title>兽交提示词</RimJobTalk_Prompt_Bestiality_Title>
+    <RimJobTalk_Prompt_Bestiality_Desc>用于人类与动物场景的模板（人类独白）。</RimJobTalk_Prompt_Bestiality_Desc>
+    
+    <RimJobTalk_Prompt_Necrophilia_Title>恋尸提示词</RimJobTalk_Prompt_Necrophilia_Title>
+    <RimJobTalk_Prompt_Necrophilia_Desc>用于恋尸场景的模板（与尸体性行为，人类独白）。</RimJobTalk_Prompt_Necrophilia_Desc>
+    
+    <RimJobTalk_Prompt_Solo_Title>自慰提示词</RimJobTalk_Prompt_Solo_Title>
+    <RimJobTalk_Prompt_Solo_Desc>用于自慰场景的模板。</RimJobTalk_Prompt_Solo_Desc>
+    
+    <!-- 变量提示 -->
+    <RimJobTalk_Variables_Standard>变量: {speaker}, {target}, {sexType}, {tailFlavor}</RimJobTalk_Variables_Standard>
+    <RimJobTalk_Variables_Bestiality>变量: {speaker}, {animal}, {sexType}, {context}</RimJobTalk_Variables_Bestiality>
+    <RimJobTalk_Variables_Necrophilia>变量: {speaker}, {corpse}, {sexType}, {context}</RimJobTalk_Variables_Necrophilia>
+    <RimJobTalk_Variables_Solo>变量: {speaker}, {sexType}, {context}</RimJobTalk_Variables_Solo>
+    
+    <!-- 情境编辑器标题 -->
+    <RimJobTalk_Context_Loving_Title>恋爱情境</RimJobTalk_Context_Loving_Title>
+    <RimJobTalk_Context_Loving_Desc>在浪漫/恋爱性行为时添加。</RimJobTalk_Context_Loving_Desc>
+    
+    <RimJobTalk_Context_Tailjob_Title>尾交情境</RimJobTalk_Context_Tailjob_Title>
+    <RimJobTalk_Context_Tailjob_Desc>使用尾巴时添加。变量: {owner}, {tailDesc}</RimJobTalk_Context_Tailjob_Desc>
+    
+    <RimJobTalk_Context_TailSpeaker_Title>说话者尾巴描述</RimJobTalk_Context_TailSpeaker_Title>
+    <RimJobTalk_Context_TailSpeaker_Desc>说话者尾巴的描述。变量: {name}, {tailDesc}</RimJobTalk_Context_TailSpeaker_Desc>
+    
+    <RimJobTalk_Context_TailTarget_Title>目标尾巴描述</RimJobTalk_Context_TailTarget_Title>
+    <RimJobTalk_Context_TailTarget_Desc>目标尾巴的描述。变量: {name}, {tailDesc}</RimJobTalk_Context_TailTarget_Desc>
+    
+    <!-- 按钮 -->
+    <RimJobTalk_Button_ResetToDefault>恢复默认</RimJobTalk_Button_ResetToDefault>
+    <RimJobTalk_Button_Reset>重置</RimJobTalk_Button_Reset>
+    <RimJobTalk_Button_ResetAll>全部恢复默认</RimJobTalk_Button_ResetAll>
+    
+    <!-- 确认对话框 -->
+    <RimJobTalk_Confirm_ResetAll>确定要将所有提示词恢复为默认值吗？</RimJobTalk_Confirm_ResetAll>
+    
+    <!-- 帮助部分 -->
+    <RimJobTalk_Help_AvailableVariables>可用变量</RimJobTalk_Help_AvailableVariables>
+    <RimJobTalk_Help_PromptVariables>═══ 提示词模板变量 ═══</RimJobTalk_Help_PromptVariables>
+    <RimJobTalk_Help_ScribanVariables>═══ Scriban 模板变量（用于 RimTalk）═══</RimJobTalk_Help_ScribanVariables>
+    <RimJobTalk_Help_ScribanNote>这些变量在 RimTalk 的模板系统中使用。\n注意：布尔值比较需要使用 == "true"（例如，{{ if sex_is_rape == "true" }}）</RimJobTalk_Help_ScribanNote>
+    <RimJobTalk_Help_Tips>═══ 提示 ═══</RimJobTalk_Help_Tips>
+    
+    <!-- 提示 -->
+    <RimJobTalk_Tip_Speaker>• 使用 {speaker} 表示说话小人的名字</RimJobTalk_Tip_Speaker>
+    <RimJobTalk_Tip_Target>• 使用 {target} 表示另一个小人的名字</RimJobTalk_Tip_Target>
+    <RimJobTalk_Tip_SexType>• {sexType} 会生成类似"正在进行阴道性交"的描述</RimJobTalk_Tip_SexType>
+    <RimJobTalk_Tip_TailFlavor>• {tailFlavor} 会在适用时添加尾巴描述</RimJobTalk_Tip_TailFlavor>
+    <RimJobTalk_Tip_AIDescriptive>• 提示词会发送给 AI，所以请详细描述！</RimJobTalk_Tip_AIDescriptive>
+    <RimJobTalk_Tip_Scriban>• 你可以在 RimTalk 提示词中使用 Scriban 语法</RimJobTalk_Tip_Scriban>
+    
+    <!-- Mod 设置 -->
+    <RimJobTalk_ModSettings_Title>RimJobTalk 设置</RimJobTalk_ModSettings_Title>
+</LanguageData>

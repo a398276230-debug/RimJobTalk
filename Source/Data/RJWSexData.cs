@@ -238,6 +238,50 @@ namespace RimJobTalk.Data
         /// </summary>
         public bool IsSixtynine => SexType == xxx.rjwSextype.Sixtynine;
 
+        // ===== Necrophilia =====
+
+        /// <summary>
+        /// Is this necrophilia (sex with a corpse)
+        /// Detected by checking if the recipient/partner is dead
+        /// </summary>
+        public bool IsNecrophilia
+        {
+            get
+            {
+                // Check if the partner/recipient is dead
+                if (Recipient != null && Recipient.Dead)
+                    return true;
+                if (Partner != null && Partner.Dead)
+                    return true;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Is the initiator a necrophiliac (has the trait)
+        /// </summary>
+        public bool InitiatorIsNecrophiliac => Initiator != null && xxx.is_necrophiliac(Initiator);
+
+        /// <summary>
+        /// The corpse pawn (if necrophilia)
+        /// </summary>
+        public Pawn CorpsePawn
+        {
+            get
+            {
+                if (Recipient != null && Recipient.Dead)
+                    return Recipient;
+                if (Partner != null && Partner.Dead)
+                    return Partner;
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Name of the corpse (if necrophilia)
+        /// </summary>
+        public string CorpseName => CorpsePawn?.LabelShort ?? "Unknown";
+
         // ===== 描述性信息 =====
 
         /// <summary>

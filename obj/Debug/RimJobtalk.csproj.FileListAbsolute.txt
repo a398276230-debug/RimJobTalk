@@ -7,3 +7,4 @@ D:\steam\steamapps\common\Rjwtalk patch\1.6\Assemblies\RimJobTalk.dll
 D:\steam\steamapps\common\Rjwtalk patch\1.6\Assemblies\RimJobTalk.pdb
 D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobTalk.dll
 D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobTalk.pdb
+D:\steam\steamapps\common\Rjwtalk patch\obj\Debug\RimJobtalk.sourcelink.json

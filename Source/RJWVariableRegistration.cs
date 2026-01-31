@@ -28,6 +28,9 @@ namespace RimJobTalk
     ///   - sex_type_description: Human-readable description
     ///   - sex_is_rape: Whether this is rape
     ///   - sex_is_whoring: Whether this is prostitution
+    ///   - sex_is_necrophilia: Whether this is necrophilia (sex with corpse)
+    ///   - sex_corpse_name: Name of the corpse (if necrophilia)
+    ///   - sex_initiator_is_necrophiliac: Whether initiator has necrophiliac trait
     ///   - sex_initiator_name: Name of the initiator
     ///   - sex_recipient_name: Name of the recipient
     ///   ... and more

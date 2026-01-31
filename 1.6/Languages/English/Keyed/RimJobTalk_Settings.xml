@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- Tab Names -->
+    <RimJobTalk_Tab_Normal>Normal</RimJobTalk_Tab_Normal>
+    <RimJobTalk_Tab_Rape>Rape</RimJobTalk_Tab_Rape>
+    <RimJobTalk_Tab_Whoring>Whoring</RimJobTalk_Tab_Whoring>
+    <RimJobTalk_Tab_Bestiality>Bestiality</RimJobTalk_Tab_Bestiality>
+    <RimJobTalk_Tab_Necrophilia>Necrophilia</RimJobTalk_Tab_Necrophilia>
+    <RimJobTalk_Tab_Solo>Solo</RimJobTalk_Tab_Solo>
+    <RimJobTalk_Tab_Context>Context</RimJobTalk_Tab_Context>
+    <RimJobTalk_Tab_Help>Help</RimJobTalk_Tab_Help>
+    
+    <!-- Prompt Editor Titles -->
+    <RimJobTalk_Prompt_Normal_Title>Normal Sex Prompt</RimJobTalk_Prompt_Normal_Title>
+    <RimJobTalk_Prompt_Normal_Desc>Template for romantic/consensual sex between two pawns.</RimJobTalk_Prompt_Normal_Desc>
+    
+    <RimJobTalk_Prompt_Rape_Title>Rape Prompt</RimJobTalk_Prompt_Rape_Title>
+    <RimJobTalk_Prompt_Rape_Desc>Template for non-consensual scenarios.</RimJobTalk_Prompt_Rape_Desc>
+    
+    <RimJobTalk_Prompt_Whoring_Title>Prostitution Prompt</RimJobTalk_Prompt_Whoring_Title>
+    <RimJobTalk_Prompt_Whoring_Desc>Template for paid sex scenarios.</RimJobTalk_Prompt_Whoring_Desc>
+    
+    <RimJobTalk_Prompt_Bestiality_Title>Bestiality Prompt</RimJobTalk_Prompt_Bestiality_Title>
+    <RimJobTalk_Prompt_Bestiality_Desc>Template for human x animal scenarios (human monologue).</RimJobTalk_Prompt_Bestiality_Desc>
+    
+    <RimJobTalk_Prompt_Necrophilia_Title>Necrophilia Prompt</RimJobTalk_Prompt_Necrophilia_Title>
+    <RimJobTalk_Prompt_Necrophilia_Desc>Template for necrophilia scenarios (sex with corpse, human monologue).</RimJobTalk_Prompt_Necrophilia_Desc>
+    
+    <RimJobTalk_Prompt_Solo_Title>Masturbation Prompt</RimJobTalk_Prompt_Solo_Title>
+    <RimJobTalk_Prompt_Solo_Desc>Template for solo/masturbation scenarios.</RimJobTalk_Prompt_Solo_Desc>
+    
+    <!-- Variable Hints -->
+    <RimJobTalk_Variables_Standard>Variables: {speaker}, {target}, {sexType}, {tailFlavor}</RimJobTalk_Variables_Standard>
+    <RimJobTalk_Variables_Bestiality>Variables: {speaker}, {animal}, {sexType}, {context}</RimJobTalk_Variables_Bestiality>
+    <RimJobTalk_Variables_Necrophilia>Variables: {speaker}, {corpse}, {sexType}, {context}</RimJobTalk_Variables_Necrophilia>
+    <RimJobTalk_Variables_Solo>Variables: {speaker}, {sexType}, {context}</RimJobTalk_Variables_Solo>
+    
+    <!-- Context Editor Titles -->
+    <RimJobTalk_Context_Loving_Title>Loving Context</RimJobTalk_Context_Loving_Title>
+    <RimJobTalk_Context_Loving_Desc>Added when it's romantic/loving sex.</RimJobTalk_Context_Loving_Desc>
+    
+    <RimJobTalk_Context_Tailjob_Title>Tailjob Context</RimJobTalk_Context_Tailjob_Title>
+    <RimJobTalk_Context_Tailjob_Desc>Added when using tail. Variables: {owner}, {tailDesc}</RimJobTalk_Context_Tailjob_Desc>
+    
+    <RimJobTalk_Context_TailSpeaker_Title>Speaker Tail Flavor</RimJobTalk_Context_TailSpeaker_Title>
+    <RimJobTalk_Context_TailSpeaker_Desc>Description of speaker's tail. Variables: {name}, {tailDesc}</RimJobTalk_Context_TailSpeaker_Desc>
+    
+    <RimJobTalk_Context_TailTarget_Title>Target Tail Flavor</RimJobTalk_Context_TailTarget_Title>
+    <RimJobTalk_Context_TailTarget_Desc>Description of target's tail. Variables: {name}, {tailDesc}</RimJobTalk_Context_TailTarget_Desc>
+    
+    <!-- Buttons -->
+    <RimJobTalk_Button_ResetToDefault>Reset to Default</RimJobTalk_Button_ResetToDefault>
+    <RimJobTalk_Button_Reset>Reset</RimJobTalk_Button_Reset>
+    <RimJobTalk_Button_ResetAll>Reset All to Defaults</RimJobTalk_Button_ResetAll>
+    
+    <!-- Confirmation Dialog -->
+    <RimJobTalk_Confirm_ResetAll>Are you sure you want to reset all prompts to their default values?</RimJobTalk_Confirm_ResetAll>
+    
+    <!-- Help Section -->
+    <RimJobTalk_Help_AvailableVariables>Available Variables</RimJobTalk_Help_AvailableVariables>
+    <RimJobTalk_Help_PromptVariables>═══ Prompt Template Variables ═══</RimJobTalk_Help_PromptVariables>
+    <RimJobTalk_Help_ScribanVariables>═══ Scriban Template Variables (for RimTalk) ═══</RimJobTalk_Help_ScribanVariables>
+    <RimJobTalk_Help_ScribanNote>These variables work in RimTalk's template system.\nNote: Boolean comparisons need == "true" (e.g., {{ if sex_is_rape == "true" }})</RimJobTalk_Help_ScribanNote>
+    <RimJobTalk_Help_Tips>═══ Tips ═══</RimJobTalk_Help_Tips>
+    
+    <!-- Tips -->
+    <RimJobTalk_Tip_Speaker>• Use {speaker} for the speaking pawn's name</RimJobTalk_Tip_Speaker>
+    <RimJobTalk_Tip_Target>• Use {target} for the other pawn's name</RimJobTalk_Tip_Target>
+    <RimJobTalk_Tip_SexType>• {sexType} gives a description like 'having vaginal sex'</RimJobTalk_Tip_SexType>
+    <RimJobTalk_Tip_TailFlavor>• {tailFlavor} adds tail descriptions if applicable</RimJobTalk_Tip_TailFlavor>
+    <RimJobTalk_Tip_AIDescriptive>• Prompts are sent to the AI, so be descriptive!</RimJobTalk_Tip_AIDescriptive>
+    <RimJobTalk_Tip_Scriban>• You can use Scriban syntax in RimTalk prompts</RimJobTalk_Tip_Scriban>
+    
+    <!-- Mod Settings -->
+    <RimJobTalk_ModSettings_Title>RimJobTalk Settings</RimJobTalk_ModSettings_Title>
+</LanguageData>

@@ -36,9 +36,13 @@ namespace RimJobTalk
             // Check if at least one party is human
             bool initiatorIsHuman = xxx.is_human(initiator);
             bool partnerIsHuman = partner != null && xxx.is_human(partner);
+            
+            // Check for necrophilia - partner is dead (corpse)
+            bool isNecrophilia = partner != null && partner.Dead && xxx.is_human(partner);
+            Pawn corpsePawn = isNecrophilia ? partner : null;
 
-            // Skip if neither party is human (animal x animal)
-            if (!initiatorIsHuman && !partnerIsHuman)
+            // Skip if neither party is human (animal x animal) - but allow necrophilia
+            if (!initiatorIsHuman && !partnerIsHuman && !isNecrophilia)
             {
                 if (Prefs.DevMode)
                 {
@@ -57,14 +61,26 @@ namespace RimJobTalk
                 return;
             }
 
-            // Determine speaker and target based on who is human
+            // Log necrophilia detection
+            if (isNecrophilia)
+            {
+                Log.Message($"[RimJobTalk] Necrophilia detected - Initiator: {initiator?.Name?.ToStringShort}, Corpse: {partner?.Name?.ToStringShort}");
+            }
+
+            // Determine speaker and target based on scenario type
             Pawn speaker;
             Pawn target;
-            bool isBestiality = !initiatorIsHuman || !partnerIsHuman;
+            bool isBestiality = !initiatorIsHuman || (!partnerIsHuman && !isNecrophilia);
 
-            if (initiatorIsHuman && partnerIsHuman)
+            if (isNecrophilia)
             {
-                // Both human - normal dialogue mode
+                // Necrophilia - only living human speaks (monologue mode)
+                speaker = initiator;
+                target = null; // Monologue - corpse cannot respond
+            }
+            else if (initiatorIsHuman && partnerIsHuman)
+            {
+                // Both human and alive - normal dialogue mode
                 speaker = initiator;
                 target = partner;
             }
@@ -81,7 +97,9 @@ namespace RimJobTalk
                 target,
                 sexProps,
                 isBestiality,
-                isBestiality ? (initiatorIsHuman ? partner : initiator) : null // animal pawn for bestiality
+                isBestiality ? (initiatorIsHuman ? partner : initiator) : null, // animal pawn for bestiality
+                isNecrophilia,
+                corpsePawn
             );
 
             if (string.IsNullOrEmpty(prompt))

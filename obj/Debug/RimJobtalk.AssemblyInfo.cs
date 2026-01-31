@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RimJobTalk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e156601ef929f1ad7f663fcf21be127385fbf9c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("RimJobTalk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RimJobTalk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -22,6 +22,7 @@ namespace RimJobTalk
     /// 2. Sex context variables (use {{ xxx }} in templates):
     ///    - sex_type, sex_type_description
     ///    - sex_is_rape, sex_is_whoring, sex_is_loving
+    ///    - sex_is_necrophilia, sex_corpse_name, sex_initiator_is_necrophiliac
     ///    - sex_initiator_name, sex_recipient_name
     ///    - sex_orgasms, sex_is_vaginal, sex_is_anal, sex_is_oral
     /// 
@@ -141,6 +142,11 @@ namespace RimJobTalk
             RegisterContextVar("sex_is_anal", () => (RJWVariableRegistration.CurrentSexData?.IsAnal ?? false).ToString().ToLower());
             RegisterContextVar("sex_is_oral", () => (RJWVariableRegistration.CurrentSexData?.IsOral ?? false).ToString().ToLower());
             RegisterContextVar("sex_is_masturbation", () => (RJWVariableRegistration.CurrentSexData?.IsMasturbation ?? false).ToString().ToLower());
+            
+            // Necrophilia context variables
+            RegisterContextVar("sex_is_necrophilia", () => (RJWVariableRegistration.CurrentSexData?.IsNecrophilia ?? false).ToString().ToLower());
+            RegisterContextVar("sex_corpse_name", () => RJWVariableRegistration.CurrentSexData?.CorpseName ?? "Unknown");
+            RegisterContextVar("sex_initiator_is_necrophiliac", () => (RJWVariableRegistration.CurrentSexData?.InitiatorIsNecrophiliac ?? false).ToString().ToLower());
         }
 
         private static void RegisterContextVar(string name, Func<string> provider)

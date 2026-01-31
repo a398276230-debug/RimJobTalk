@@ -1,4 +1,6 @@
 using HarmonyLib;
+using RimJobTalk.UI;
+using UnityEngine;
 using Verse;
 
 namespace RimJobTalk
@@ -10,13 +12,29 @@ namespace RimJobTalk
     public class RimJobTalkMod : Mod
     {
         public static Harmony HarmonyInstance { get; private set; }
+        public static RimJobTalkSettings Settings { get; private set; }
 
         public RimJobTalkMod(ModContentPack content) : base(content)
         {
-            // Don't patch here - it's too early!
-            // Harmony patches are applied in HarmonyBootstrap using StaticConstructorOnStartup
+            // Load settings
+            Settings = GetSettings<RimJobTalkSettings>();
+            
+            // Initialize Harmony
             HarmonyInstance = new Harmony("ruaji.rimjobtalk");
             Log.Message("[RimJobTalk] Mod loaded. Waiting for game initialization to apply patches...");
+        }
+
+        /// <summary>
+        /// Mod settings button label in the mod list
+        /// </summary>
+        public override string SettingsCategory() => "RimJobTalk";
+
+        /// <summary>
+        /// Draw the settings window
+        /// </summary>
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            RimJobTalkSettingsUI.DoSettingsWindowContents(inRect, Settings);
         }
     }
 
