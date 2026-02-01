@@ -2,6 +2,7 @@ using System;
 using rjw;
 using RimTalk.Data;
 using RimTalk.Source.Data;
+using UnityEngine;
 using Verse;
 
 namespace RimJobTalk
@@ -11,6 +12,11 @@ namespace RimJobTalk
     /// </summary>
     public static class SexTalkUtility
     {
+        /// <summary>
+        /// Last time a sex talk was triggered (using Unity's Time.time)
+        /// </summary>
+        private static float lastSexTalkTriggerTime = -999f;
+        
         /// <summary>
         /// Called when a sex act begins. Determines if and how to trigger a RimTalk conversation.
         /// Defers the actual talk generation to avoid blocking the current frame.
@@ -27,6 +33,23 @@ namespace RimJobTalk
             {
                 Log.Message("[RimJobTalk] OnSexStart - Aborted: initiator or sexProps is null");
                 return;
+            }
+            
+            // Check cooldown
+            int cooldownSeconds = RimJobTalkMod.Settings.SexTalkCooldownSeconds;
+            if (cooldownSeconds > 0)
+            {
+                float currentTime = Time.time;
+                float timeSinceLast = currentTime - lastSexTalkTriggerTime;
+                
+                if (timeSinceLast < cooldownSeconds)
+                {
+                    Log.Message($"[RimJobTalk] OnSexStart - Skipped due to cooldown (remaining: {cooldownSeconds - timeSinceLast:F1}s)");
+                    return;
+                }
+                
+                // Update last trigger time
+                lastSexTalkTriggerTime = currentTime;
             }
 
             // Set the RJW sex context for template variable access
@@ -127,8 +150,8 @@ namespace RimJobTalk
             {
                 // Get the pawn's state from RimTalk's cache
                 Log.Message($"[RimJobTalk] Attempting to get pawnState from Cache for {speaker?.Name?.ToStringShort}");
-                PawnState speakerState = Cache.Get(speaker);
-                PawnState targetState = target != null ? Cache.Get(target) : null;
+                PawnState speakerState = RimTalk.Data.Cache.Get(speaker);
+                PawnState targetState = target != null ? RimTalk.Data.Cache.Get(target) : null;
                 
                 if (speakerState == null)
                 {

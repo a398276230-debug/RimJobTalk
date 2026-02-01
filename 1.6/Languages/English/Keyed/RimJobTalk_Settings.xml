@@ -73,4 +73,9 @@
     
     <!-- Mod Settings -->
     <RimJobTalk_ModSettings_Title>RimJobTalk Settings</RimJobTalk_ModSettings_Title>
+    
+    <!-- Cooldown Settings -->
+    <RimJobTalk_Cooldown_Title>Sex Talk Cooldown</RimJobTalk_Cooldown_Title>
+    <RimJobTalk_Cooldown_Value>{0}s (0 = disabled)</RimJobTalk_Cooldown_Value>
+    <RimJobTalk_Cooldown_Tooltip>After triggering a sex dialogue, ignore subsequent sex events for this duration.\nSet to 0 to disable cooldown and always trigger dialogue.</RimJobTalk_Cooldown_Tooltip>
 </LanguageData>

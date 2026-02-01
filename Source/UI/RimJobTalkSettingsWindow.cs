@@ -34,16 +34,21 @@ namespace RimJobTalk.UI
         public static void DoSettingsWindowContents(Rect inRect, RimJobTalkSettings settings)
         {
             // Layout
+            float cooldownHeight = 50f;
             float tabHeight = 35f;
             string[] tabNames = GetTabNames();
             float tabWidth = inRect.width / tabNames.Length;
             
+            // Draw cooldown slider at the top
+            Rect cooldownRect = new Rect(inRect.x, inRect.y, inRect.width, cooldownHeight);
+            DrawCooldownSetting(cooldownRect, settings);
+            
             // Draw tabs
-            Rect tabRect = new Rect(inRect.x, inRect.y, inRect.width, tabHeight);
+            Rect tabRect = new Rect(inRect.x, inRect.y + cooldownHeight, inRect.width, tabHeight);
             DrawTabs(tabRect, tabWidth, tabNames);
             
             // Content area
-            Rect contentRect = new Rect(inRect.x, inRect.y + tabHeight + 10f, inRect.width, inRect.height - tabHeight - 50f);
+            Rect contentRect = new Rect(inRect.x, inRect.y + cooldownHeight + tabHeight + 10f, inRect.width, inRect.height - cooldownHeight - tabHeight - 50f);
             
             // Draw content based on selected tab
             Widgets.BeginScrollView(contentRect, ref scrollPosition, new Rect(0, 0, contentRect.width - 20f, GetContentHeight(selectedTab, settings)));
@@ -113,6 +118,32 @@ namespace RimJobTalk.UI
             // Bottom buttons
             Rect bottomRect = new Rect(inRect.x, inRect.yMax - 35f, inRect.width, 35f);
             DrawBottomButtons(bottomRect, settings);
+        }
+
+        private static void DrawCooldownSetting(Rect rect, RimJobTalkSettings settings)
+        {
+            Text.Font = GameFont.Small;
+            
+            // Label
+            Rect labelRect = new Rect(rect.x, rect.y, 200f, 22f);
+            Widgets.Label(labelRect, "RimJobTalk_Cooldown_Title".Translate());
+            
+            // Slider
+            Rect sliderRect = new Rect(rect.x, rect.y + 22f, rect.width - 60f, 22f);
+            int newValue = (int)Widgets.HorizontalSlider(
+                sliderRect,
+                settings.SexTalkCooldownSeconds,
+                0f,
+                60f,
+                middleAlignment: true,
+                label: "RimJobTalk_Cooldown_Value".Translate(settings.SexTalkCooldownSeconds),
+                leftAlignedLabel: "0",
+                rightAlignedLabel: "60"
+            );
+            settings.SexTalkCooldownSeconds = newValue;
+            
+            // Tooltip
+            TooltipHandler.TipRegion(sliderRect, "RimJobTalk_Cooldown_Tooltip".Translate());
         }
 
         private static void DrawTabs(Rect tabRect, float tabWidth, string[] tabNames)

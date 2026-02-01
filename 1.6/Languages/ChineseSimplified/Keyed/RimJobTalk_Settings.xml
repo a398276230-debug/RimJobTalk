@@ -73,4 +73,9 @@
     
     <!-- Mod 设置 -->
     <RimJobTalk_ModSettings_Title>RimJobTalk 设置</RimJobTalk_ModSettings_Title>
+    
+    <!-- 冷却设置 -->
+    <RimJobTalk_Cooldown_Title>性行为对话冷却</RimJobTalk_Cooldown_Title>
+    <RimJobTalk_Cooldown_Value>{0}秒 (0 = 禁用)</RimJobTalk_Cooldown_Value>
+    <RimJobTalk_Cooldown_Tooltip>触发一次性行为对话后，在此时间内忽略后续的性行为事件。\n设为0禁用冷却，始终触发对话。</RimJobTalk_Cooldown_Tooltip>
 </LanguageData>

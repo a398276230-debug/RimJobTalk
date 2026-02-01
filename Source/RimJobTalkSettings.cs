@@ -9,6 +9,15 @@ namespace RimJobTalk
     /// </summary>
     public class RimJobTalkSettings : ModSettings
     {
+        // ===== General Settings =====
+        
+        /// <summary>
+        /// Cooldown time in seconds between sex talk triggers.
+        /// 0 = disabled (always trigger dialogue)
+        /// </summary>
+        public int SexTalkCooldownSeconds = DefaultSexTalkCooldownSeconds;
+        public const int DefaultSexTalkCooldownSeconds = 30;
+        
         // ===== Prompt Templates =====
         
         /// <summary>
@@ -115,6 +124,9 @@ namespace RimJobTalk
         {
             base.ExposeData();
             
+            // General settings
+            Scribe_Values.Look(ref SexTalkCooldownSeconds, "SexTalkCooldownSeconds", DefaultSexTalkCooldownSeconds);
+            
             // Prompt templates
             Scribe_Values.Look(ref PromptNormal, "PromptNormal", DefaultPromptNormal);
             Scribe_Values.Look(ref PromptRape, "PromptRape", DefaultPromptRape);
@@ -133,10 +145,14 @@ namespace RimJobTalk
         }
 
         /// <summary>
-        /// Reset all prompts to defaults
+        /// Reset all settings to defaults
         /// </summary>
         public void ResetToDefaults()
         {
+            // General settings
+            SexTalkCooldownSeconds = DefaultSexTalkCooldownSeconds;
+            
+            // Prompt templates
             PromptNormal = DefaultPromptNormal;
             PromptRape = DefaultPromptRape;
             PromptWhoring = DefaultPromptWhoring;
